@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WEB700</title>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/theme.css" type="text/css"/>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Student Name</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="/htmlDemo">Html Demo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/students/add">Add Student</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/students">Students</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/tas">Teaching Assistants</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/courses">Courses</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <main class="col-md-12">
+          <!-- Start your code here -->
+          <br />
+          <h3>
+            Welcome to the site , i am using HTML 5 rules and techniques to create this !
+          </h3>
+          <br /><u><h1>Intro to the website:</h1></u> <br />
+          <h5>
+            This website has :
+            * three static views i.e home ,about ,homeDemo .
+            * Five routes that supply data i.e All Students,Students by Course,
+            A Single Student By Student Number, All TAs and All Courses. 
+            All realted relevant links to pages are as bellow :
+            <br />
+            <h5>
+              <ol>
+                <li>
+                  Home page using GET "/" request with url "http://localhost:8080".
+                </li>
+                <li>
+                  About page using GET "/about" request with url "http://localhost:8080/about".
+                </li>
+                <li>
+                  Demo page using by GET "/htmlDemo" request with url "http://localhost:8080/htmlDemo".
+                </li>
+                <li>
+                  GET "/students" request with url "http://localhost:8080/students" will return a json 
+                  string containing all of the students coming from the getAllStudents function.
+                </li>
+                <li>
+                  GET "/students?course=value" request with url "http://localhost:8080/students?course=4" will return a json
+                  string consisting of all students where value could be one of 1, 2, 3, to 7 (as there are 7 cources in the dataset)"
+                  - using the getStudentsByCourse(course) function in the collegeData
+                </li>
+                <li>
+                  GET "/tas" request with url "http://localhost:8080/tas" again returns a json format string containing
+                  all of the tas output from the getTAs function ( If any error in promise run the object back as json 
+                  {message:"no results"} )
+                </li>
+                <li>
+                  GET "/courses" request with url "http://localhost:8080/courses" will return a json format
+                  string with all of the courses output from the getCourses function
+                </li>
+                <li>
+                  GET "/students/:num" request from url
+                  "http://localhost:8080/students/2" will return a json
+                  format string with only a single student where studentNum
+                  property matches the num parameter in the route i.e. Student
+                  with ID 5 in the example case.
+                </li>
+              </ol>
+            </h5>
+          </h5>
+          <br />
+          <h4> Intro On HTML5</h4>
+          <h5>
+            HTML5 is a markup language used for structuring and presenting content on the World Wide Web. 
+            It is the fifth and final major HTML version that is a World Wide Web Consortium (W3C) recommendation.
+            The current specification is known as the HTML Living Standard. It is maintained by the Web Hypertext Application
+            Technology Working Group (WHATWG),a consortium of the major browser vendors (Apple, Google, Mozilla, and Microsoft).
+          </h5>
+
+          <!-- End -->
+        </main>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
